@@ -16,11 +16,9 @@ namespace FunnyTest
 
         protected string getUrl()
         {
-            return string.Format(@"http://{0}:{1}/{2}/",
-                Request.ServerVariables["LOCAL_ADDR"],
-                Request.Url.Port,
-                Request.Url.Segments[1].Replace("/", "")
-                );
+            var strURL = "http://" + Request.Url.Host + ":" + Request.Url.Port +
+                (Request.ApplicationPath.EndsWith("/") ? string.Empty : Request.ApplicationPath);
+            return strURL;
         }
     }
 }

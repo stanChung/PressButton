@@ -41,7 +41,7 @@ namespace FunnyTest
                 }
             };
 
-            var bmp = qrWriter.Write(strUri);
+            var bmp = qrWriter.Write(strUri.Replace("127.0.0.1","stan-nb"));
             context.Response.ContentType = "text/plain";
             bmp.Save(context.Response.OutputStream, System.Drawing.Imaging.ImageFormat.Jpeg);
 

@@ -102,6 +102,7 @@
     <Content Include="images\up2.png" />
     <Content Include="OperatorClient.aspx" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CPCSQL.pubxml" />
     <None Include="Properties\PublishProfiles\deploy.pubxml" />
     <Content Include="QrPic.ashx" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
