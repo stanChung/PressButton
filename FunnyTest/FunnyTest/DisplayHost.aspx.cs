@@ -16,8 +16,14 @@ namespace FunnyTest
 
         protected string getUrl()
         {
+            
+#if !Release
             var strURL = "http://" + Request.Url.Host + ":" + Request.Url.Port +
                 (Request.ApplicationPath.EndsWith("/") ? string.Empty : Request.ApplicationPath);
+#else
+            var strURL = "http://" + Request.Url.Host  +
+                (Request.ApplicationPath.EndsWith("/") ? string.Empty : Request.ApplicationPath);
+#endif
             return strURL;
         }
     }
