@@ -34,9 +34,8 @@ namespace FunnyTest
                 );
 
 #else
-            var strUri = string.Format(@"http://{0}/{1}/OperatorClient.aspx?strId={2}",
+            var strUri = string.Format(@"http://{0}/OperatorClient.aspx?strId={1}",
                 context.Request.ServerVariables["SERVER_NAME"],
-                context.Request.Url.Segments[1].Replace("/", ""),
                 context.Request["strId"].ToString()
                 );
 #endif
