@@ -93,6 +93,7 @@
 
                 var gid = "<%=Guid.NewGuid() %>";
                 //var gid = "host";
+                document.title = "";
                 $("#hId").val("host_" + gid);
                 var uri = "<%=getUrl()%>/QrPic.ashx?strId=" + gid;
                 $("#imgQrCode").attr("src", uri);
