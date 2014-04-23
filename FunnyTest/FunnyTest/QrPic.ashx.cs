@@ -34,7 +34,7 @@ namespace FunnyTest
                 );
 #else
             var strUri = string.Format(@"http://{0}/{1}/OperatorClient.aspx?strId={2}",
-                context.Request.ServerVariables["LOCAL_ADDR"],
+                context.Request.ServerVariables["SERVER_NAME"],
                 context.Request.Url.Segments[1].Replace("/", ""),
                 context.Request["strId"].ToString()
                 );
@@ -49,7 +49,7 @@ namespace FunnyTest
                 }
             };
 
-            var bmp = qrWriter.Write(strUri.Replace("127.0.0.1","stan-nb"));
+            var bmp = qrWriter.Write(strUri);
             context.Response.ContentType = "text/plain";
             bmp.Save(context.Response.OutputStream, System.Drawing.Imaging.ImageFormat.Jpeg);
 
