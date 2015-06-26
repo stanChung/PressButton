@@ -5,11 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <table>
+<div class="row">
+    <div class=" col-xs-8">
+<table>
             <tr>
                 <td>
                 </td>
@@ -29,7 +33,12 @@
                 <td></td>
             </tr>
         </table>
-<table>
+    </div>
+</div>
+ <div class="row">
+
+     <div class="col-xs-8">
+         <table>
     <tr>
         <td>
             <span id="msLogin"></span>
@@ -37,10 +46,14 @@
     </tr>
     <tr>
         <td>
-                <input id="btnOfffLine" type="button" value="斷線" />
+            <button id="btnOfffLine" class="btn btn-danger"><i class=" icon-ban-circle"></i>斷線</button>
+                <%--<input id="btnOfffLine" type="button" value="斷線" />--%>
         </td>
     </tr>
 </table>
+     </div>
+ </div>       
+
         <input id="hId" type="hidden" />
     </form>
     <!--Reference the jQuery library. -->
@@ -57,19 +70,19 @@
             var gid;
             var fHub = $.connection.FunnyHub;
             $("#imgUp").click(function () {
-                fHub.server.ChangeHostDirection("client_"+$("#hId").val(),"host_"+$("#hId").val(),"Up");
+                fHub.server.ChangeHostDirection("client_" + $("#hId").val(), "host_" + $("#hId").val(), "Up");
             });
             $("#imgDown").click(function () {
-                fHub.server.ChangeHostDirection("client_"+$("#hId").val(),"host_"+$("#hId").val(),"Down");
+                fHub.server.ChangeHostDirection("client_" + $("#hId").val(), "host_" + $("#hId").val(), "Down");
             });
             $("#imgLeft").click(function () {
-                fHub.server.ChangeHostDirection("client_"+$("#hId").val(),"host_"+$("#hId").val(),"Left");
+                fHub.server.ChangeHostDirection("client_" + $("#hId").val(), "host_" + $("#hId").val(), "Left");
             });
             $("#imgRight").click(function () {
-                fHub.server.ChangeHostDirection("client_"+$("#hId").val(),"host_"+$("#hId").val(), "Right");
+                fHub.server.ChangeHostDirection("client_" + $("#hId").val(), "host_" + $("#hId").val(), "Right");
             });
 
-            
+
 
             //進行斷線
             fHub.client.closeConnection = function () {
@@ -78,7 +91,7 @@
 
             //已經斷線
             $.connection.hub.disconnected(function () {
-                document.title="失去連線";
+                document.title = "失去連線";
                 alert("已失去連線！！！");
             });
 

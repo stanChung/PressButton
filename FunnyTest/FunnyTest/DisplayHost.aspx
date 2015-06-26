@@ -5,41 +5,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <table>
-                <tr>
-                    <td></td>
-                    <td>
-                        <img alt="" id="imgUp" src="images/up2.png" /></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="" id="imgLeft" src="images/left2.png" /></td>
-                    <td></td>
-                    <td>
-                        <img alt="" id="imgRight" src="images/right2.png" /></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <img alt="" id="imgDown" src="images/down2.png" /></td>
-                    <td></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td>
-                        <a id="linkGo">
-                            <img alt="" id="imgQrCode" src="" />
-                        </a>
-                    </td>
-                </tr>
-            </table>
+        <div class=" main panel panel-default">
+            <div class=" row">
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img alt="" id="imgUp" src="images/up2.png" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" id="imgLeft" src="images/left2.png" /></td>
+                            <td></td>
+                            <td>
+                                <img alt="" id="imgRight" src="images/right2.png" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img alt="" id="imgDown" src="images/down2.png" /></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <p class=" text-success">
+                            <i class="icon-info"></i> 歡迎來到
+                        「上上下下左左右右」
+                        </p>
+                        <p class="text-muted">
+                        請以您的手機<i class="icon-mobile-phone icon-2x"></i>或其它行動裝置讀取以下QR Code！
+                            </p>
+                        <hr />
+                    </div>
+                    
+                    <div class="row">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a id="linkGo">
+                                        <img alt="" id="imgQrCode" src="" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </form>
 

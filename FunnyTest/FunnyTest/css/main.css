@@ -1,0 +1,29 @@
+﻿        body
+        {
+            background: #ddd;
+        }
+        .main
+        {
+            background: white;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        .center
+        {
+            margin: 0 auto;
+            width: 95%;
+            padding: 20px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #ddd;
+        }
+        .title
+        {
+            margin: 0 auto;
+            width: 95%;
+            padding: 20px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #ddd;
+        }
