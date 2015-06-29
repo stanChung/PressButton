@@ -35,6 +35,13 @@
                                 <img alt="" id="imgDown" src="images/down2.png" /></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td colspan="3">
+                                <select id="stHistory">
+
+                                </select>
+                            </td>
+                        </tr>
                     </table>
                 </div>
                 <div class="col-md-4">
@@ -121,6 +128,11 @@
                 $("#imgRight").css("visibility", "hidden");
 
                 $("#img" + direct).css("visibility", "display");
+
+                //加按鈕記錄
+                var now=new Date();
+                $("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
+
             };
 
             //進行斷線
