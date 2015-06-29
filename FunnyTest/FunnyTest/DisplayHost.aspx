@@ -62,7 +62,7 @@
                             <tr>
                                 <td>
 
-                                    <textarea id="stHistory" class="form-control" rows="6" cols="50" style="width:100%"></textarea>
+                                    <textarea id="stHistory" class="form-control" rows="6" cols="60" style="width:100%"></textarea>
                                 </td>
                             </tr>
                         </table>
