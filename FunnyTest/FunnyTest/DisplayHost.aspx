@@ -134,6 +134,7 @@
                 //$("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
                 var idn = now.getTime();
                 var his = now.toLocaleString() + " You press 「" + direct + "」 button." + '\r' + $("#stHistory").val();
+                $("#stHistory").text(his);
                 //$("#stHistory").append('<option value="' + idn + '">You press ' + direct + ' ' + now.toLocaleString() + '</option>');
                 //$("#stHistory").val(idn);
             };
