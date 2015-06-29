@@ -37,8 +37,8 @@
                         </tr>
                         <tr>
                             <td colspan="3">
-                                <select id="stHistory" style=" width:100%;">
-
+                                <select id="stHistory" class="form-control" style=" width:100%;" multiple>
+                                    
                                 </select>
                             </td>
                         </tr>
