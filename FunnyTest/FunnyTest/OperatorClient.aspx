@@ -104,8 +104,8 @@
             //已經斷線
             $.connection.hub.disconnected(function () {
                 document.title = "失去連線";
-                showMessage('已失去連線');
-                //alert("已失去連線！！！");
+                //showMessage('已失去連線');
+                alert("已失去連線！！！");
             });
 
             //開啟連線
