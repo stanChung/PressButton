@@ -35,11 +35,7 @@
                                 <img alt="" id="imgDown" src="images/down2.png" /></td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <td colspan="3">
-                                <select id="stHistory" style="width:100%" multiple></select>
-                            </td>
-                        </tr>
+
                     </table>
                 </div>
                 <div class="col-md-4">
@@ -61,6 +57,11 @@
                                     <a id="linkGo">
                                         <img alt="" id="imgQrCode" src="" />
                                     </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select id="stHistory" style="width: 100%" multiple></select>
                                 </td>
                             </tr>
                         </table>
@@ -128,9 +129,9 @@
                 $("#img" + direct).css("visibility", "display");
 
                 //加按鈕記錄
-                var now=new Date();
+                var now = new Date();
                 //$("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
-                
+
                 $("#stHistory").append('<option value="' + direct + '">You press ' + direct + ' ' + now.toLocaleString() + '</option>');
             };
 
@@ -165,15 +166,14 @@
 
             //modal
             var OptMessage = {
-                show:false
+                show: false
             };
             $('#modauMessage').modal(OptMessage);
 
         });
 
         //顯示訊息
-        function showMessage(message)
-        {
+        function showMessage(message) {
             var msg = "<p>" + message + "</p>";
             $("#modalbody").html(msg);
             $('#modauMessage').modal('show');
