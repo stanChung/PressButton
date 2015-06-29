@@ -132,7 +132,7 @@
                 //加按鈕記錄
                 var now=new Date();
                 $("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
-
+                $("#stHistory").append('<option value="' + direct + '">You press ' + direct + ' ' + now.format("yyyy/MM/dd hh:mm tt") + '</option>');
             };
 
             //進行斷線
