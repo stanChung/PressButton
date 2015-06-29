@@ -37,8 +37,7 @@
                         </tr>
                         <tr>
                             <td colspan="3">
-                                <textarea id="stHistory" style="width:100%" rows="6" cols="50">
-                                    </textarea>
+                                <select id="stHistory" style="width:100%" multiple></select>
                             </td>
                         </tr>
                     </table>
@@ -131,9 +130,8 @@
                 //加按鈕記錄
                 var now=new Date();
                 //$("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
-                var history = $("#stHistory").text() + "\r" + "You Press " + direct + " " + now.toLocaleString() + '</option>';
-                $("#stHistory").text(history);    
-                //.append('<option value="' + direct + '">You press ' + direct + ' ' + now.format("yyyy/MM/dd hh:mm tt") + '</option>');
+                
+                $("#stHistory").append('<option value="' + direct + '">You press ' + direct + ' ' + now.toLocaleString() + '</option>');
             };
 
             //進行斷線
