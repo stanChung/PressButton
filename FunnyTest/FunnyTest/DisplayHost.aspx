@@ -61,7 +61,8 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <select id="stHistory" class="form-control" style="width: 100%" multiple></select>
+
+                                    <textarea id="stHistory" class="form-control" rows="6" cols="50" style="width:100%"></textarea>
                                 </td>
                             </tr>
                         </table>
@@ -132,8 +133,9 @@
                 var now = new Date();
                 //$("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
                 var idn = now.getTime();
-                $("#stHistory").append('<option value="' + idn + '">You press ' + direct + ' ' + now.toLocaleString() + '</option>');
-                $("#stHistory").val(idn);
+                var his = now.toLocaleString() + " You press 「" + direct + "」 button." + '\r' + $("#stHistory").val();
+                //$("#stHistory").append('<option value="' + idn + '">You press ' + direct + ' ' + now.toLocaleString() + '</option>');
+                //$("#stHistory").val(idn);
             };
 
             //進行斷線
