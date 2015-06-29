@@ -131,7 +131,7 @@
                 //加按鈕記錄
                 var now=new Date();
                 //$("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
-                var history = $("#stHistory").text() + "\r" + "You Press " + direct + " " + now.format("yyyy/MM/dd hh:mm tt") + '</option>';
+                var history = $("#stHistory").text() + "\r" + "You Press " + direct + " " + now.toLocaleString() + '</option>';
                 $("#stHistory").text(history);    
                 //.append('<option value="' + direct + '">You press ' + direct + ' ' + now.format("yyyy/MM/dd hh:mm tt") + '</option>');
             };
