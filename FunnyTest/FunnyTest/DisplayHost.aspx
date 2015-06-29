@@ -37,7 +37,7 @@
                         </tr>
                         <tr>
                             <td colspan="3">
-                                <select id="stHistory">
+                                <select id="stHistory" style=" width:100%;">
 
                                 </select>
                             </td>
