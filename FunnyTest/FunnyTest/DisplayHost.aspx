@@ -51,10 +51,10 @@
                     </div>
 
                     <div class="row">
-                        <table>
+                        <table style="width:500px">
                             <tr>
                                 <td>
-                                    <a id="linkGo">
+                                    <a id="linkGo" href="#">
                                         <img alt="" id="imgQrCode" src="" />
                                     </a>
                                 </td>
@@ -133,7 +133,7 @@
                 var now = new Date();
                 //$("#stHistory").append($("<option></option>").attr("value", direct).text("you press " + direct + now.format("yyyy/MM/dd hh:mm tt")));
                 var idn = now.getTime();
-                var his = now.toLocaleString() + " You press 「" + direct + "」 button." + '\r' + $("#stHistory").val();
+                var his = now.toLocaleString() + " You pressed 「" + direct + "」 button." + '\r' + $("#stHistory").val();
                 $("#stHistory").text(his);
                 //$("#stHistory").append('<option value="' + idn + '">You press ' + direct + ' ' + now.toLocaleString() + '</option>');
                 //$("#stHistory").val(idn);
@@ -162,9 +162,12 @@
                 $("#hId").val("host_" + gid);
                 var uri = "<%=getUrl()%>/QrPic.ashx?strId=" + gid;
                 $("#imgQrCode").attr("src", uri);
-                $("#linkGo").attr("href", "<%=getUrl()%>/OperatorClient.aspx?strId=" + gid);
+<%--                $("#linkGo").attr("href", "<%=getUrl()%>/OperatorClient.aspx?strId=" + gid);--%>
                 fHub.server.UserConnected("host_" + gid);
 
+                $('#linkGo').click(function () {
+                    window.open("<%=getUrl()%>/OperatorClient.aspx?strId=" + gid, "width=250, height=400");
+                });
             });
 
 
